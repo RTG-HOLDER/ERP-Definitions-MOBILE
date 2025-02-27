@@ -5,8 +5,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Roblox ERP Dictionary</title>
     <style>
-      
-      html, body {
+
+        html, body {
     overflow-x: hidden; /* Prevents side-scrolling */
     width: 100%; /* Ensures full width */
 }
@@ -17,6 +17,41 @@
             100% { background-position: 0% 50%; }
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #200000, #400000, #200000);
+            background-size: 300% 300%;
+            animation: bgAnimation 10s infinite ease-in-out;
+            color: #ff5555;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding-top: 60px;
+            overflow: hidden;
+            position: relative;
+            cursor: none; /* 🔥 Hides all default cursors */
+        }
+
+        /* 🔥 Custom Red Cursor */
+        .custom-cursor {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: red;
+            border-radius: 50%;
+            pointer-events: none;
+            box-shadow: 0 0 8px red;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            transition: transform 0.03s linear;
+
+        @media (max-width: 768px) {
+    * {
+        cursor: default !important; /* Removes any custom cursor */
+    }
+}
 
 
         /* 🔥 Main Container */
@@ -75,6 +110,7 @@
             text-align: center;
             box-shadow: 0 0 20px red;
             transition: all 0.2s ease-in-out;
+            cursor: none; /* 🔥 Hides the cursor in the search bar */
         }
 
         #search-bar:focus {
@@ -160,6 +196,8 @@
 </head>
 <body>
 
+    <!-- 🖱️ Custom Cursor -->
+    <div class="custom-cursor"></div>
 
     <div class='container'>
         <h1>Roblox ERP Dictionary</h1>
