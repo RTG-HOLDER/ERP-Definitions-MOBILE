@@ -11,7 +11,13 @@
             100% { background-position: 0% 50%; }
         }
 
-        body {
+        * {
+            box-sizing: border-box;
+            word-wrap: break-word; /* Forces text to wrap */
+            overflow-wrap: break-word; /* Ensures long words break properly */
+        }
+
+        html, body {
             font-family: Arial, sans-serif;
             background: linear-gradient(-45deg, #200000, #400000, #200000);
             background-size: 300% 300%;
@@ -23,14 +29,14 @@
             height: 100vh;
             margin: 0;
             padding-top: 60px;
-            overflow-x: hidden; /* Prevent side-scrolling */
+            overflow-x: hidden; /* Prevents scrolling left/right */
             position: relative;
         }
 
         /* 🔥 Main Container */
         .container {
             width: 95%;
-            max-width: 800px; /* Better for mobile */
+            max-width: 800px; /* Optimized for mobile */
             background: rgba(21, 0, 0, 0.95);
             padding: 30px;
             border-radius: 12px;
@@ -42,6 +48,7 @@
             position: relative;
             z-index: 2;
             transition: transform 0.3s ease-in-out;
+            word-wrap: break-word;
         }
 
         /* 💨 Upgraded Scrollbar */
@@ -68,7 +75,7 @@
         }
 
         #search-bar {
-            width: 90%;
+            width: 100%;
             padding: 12px;
             font-size: 1em;
             border: 3px solid #ff4444;
@@ -101,6 +108,7 @@
             box-shadow: 0 0 15px red;
             transform: scale(1);
             opacity: 1;
+            word-wrap: break-word; /* Ensures text wraps properly */
         }
 
         /* 🔥 Popout Effect Restored */
