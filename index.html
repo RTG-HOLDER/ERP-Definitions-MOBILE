@@ -6,11 +6,6 @@
     <title>Roblox ERP Dictionary</title>
     <style>
 
-        html, body {
-    overflow-x: hidden; /* Prevents side-scrolling */
-    width: 100%; /* Ensures full width */
-}
-
         @keyframes bgAnimation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -69,7 +64,11 @@
             position: relative;
             z-index: 2;
             transition: transform 0.3s ease-in-out;
-        }
+
+                    html, body {
+    overflow-x: hidden; /* Prevents side-scrolling */
+    width: 100%; /* Ensures full width */
+}
 
         .container:hover {
             transform: scale(1.02);
